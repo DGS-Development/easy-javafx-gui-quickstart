@@ -1,0 +1,70 @@
+/* ----------------------- */
+/* Global color variables. */
+/* ----------------------- */
+
+* {
+    background-color: {{backgroundColor}};
+    decent-highlight-color: {{backgroundDarkAccentColor}};
+    background-accent-color: {{backgroundLightAccentColor}};
+    text-color: {{textColor}};
+    colorization-color: {{colorizationColor}};
+    info-color: {{infoColor}};
+    success-color: {{successColor}};
+    danger-color: {{dangerColor}};
+    warning-color: {{warningColor}};
+}
+
+/* ----------------------- */
+/* Classes to overwrite. */
+/* ----------------------- */
+
+.root {
+    -fx-background-color: background-color;
+}
+
+.text-field {
+    -fx-background-color: background-accent-color;
+    -fx-border-color: decent-highlight-color;
+    -fx-border-width: 1.5;
+}
+
+.text-field:focused {
+    -fx-background-color: background-accent-color;
+    -fx-text-fill: text-color;
+    -fx-border-color: colorization-color;
+    -fx-border-width: 1.5;
+}
+
+.text-field > .right-button {
+    -fx-background-color: transparent;
+}
+
+.text-field > .right-button > .right-button-graphic {
+    -fx-background-color: decent-highlight-color;
+}
+
+.text-field > .right-button:hover > .right-button-graphic {
+    -fx-background-color: colorization-color;
+}
+
+.text-area .content {
+    -fx-background-color: background-accent-color;
+}
+
+.text-area:focused .content {
+    -fx-background-color: background-accent-color;
+}
+
+.password-field > .right-button:pressed {
+    -fx-background-color: transparent;
+}
+
+.password-field > .right-button:pressed > .right-button-graphic {
+    -fx-background-color: colorization-color;
+}
+
+/* ----------------------- */
+/* Custom CSS classes. */
+/* ----------------------- */
+
+/* Write custom CSS classes here. */
